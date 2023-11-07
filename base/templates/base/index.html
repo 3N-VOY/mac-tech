@@ -1,0 +1,491 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+
+
+<!-- main image and intro -->
+
+    <section class="intro" id="intro">
+        <div class="container-lg  ">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div class="display-2 text-light">{{product.title}}</div>
+                        <div class="display-5 text-light">Inspiration in Focus</div>
+                    </h1>
+                    <p class="lead my-4 text-light">{{product.description}}.</p>
+                    <a href="#offcanvasRight"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-dark btn-lg btn-outline-info text-light">Buy Now</a>
+
+                    <!-- sidebar o/ offcanvas-->
+                  <div class="container-lg">
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel" class="text-light">Purchase Details</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                    
+
+                        <!-- customer details -->
+                        
+                        <section class="order-form  text-light">
+                          <div class="container">
+                              <div class="row">
+                        
+                                  <div class="col-12">
+
+                                    <p class="text-light">Select your Pricing Package</p>
+                                    <!-- dropdown -->
+                                    <div class="selection1">
+                                      <select class="form-select text-light" aria-label="Default select example">
+                                        <option value="1" selected>Complete Edition</option>
+                                        <option value="2">Starter Edition</option>
+                                      
+                                        <option value="3">Ultimate Edition</option>
+                                      </select>
+                                    </div>
+                                    
+
+                                         
+                                          <div class="col-12 mt-3">
+                                              <div class="form-outline">
+                                                  <label class="form-label text-light" for="form1">First Name</label>
+                                                  <input type="text" id="form1" class="form-control order-form-input text-light" />
+                                                
+                                              </div>
+                                          </div>
+                                          <div class="mt-4">
+                                              <div class="form-outline">
+                                                <label class="form-label" for="form2">Last Name</label>
+                                                  <input type="text" id="form2" class="form-control order-form-input text-light" />
+                                                  
+                                              </div>
+                                          </div>
+                                                                                  
+                        
+                        
+                                      <div class="mt-3">
+                                         
+                                          <div class="col-12">
+                                              <div class="form-outline">
+                                                  
+                                                  <label class="form-label" for="form5">Street Address</label>
+                                                  <input type="text" id="form5" class="form-control order-form-input text-light" />
+                                              </div>
+                                          </div>
+                                          <div class="col-12 mt-2">
+                                              <div class="form-outline">
+
+                                                  <label class="form-label" for="form6">Street Address Line 2</label>
+                                                  <input type="text" id="form6" class="form-control order-form-input text-light" />
+                                                  
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-6 mt-2 pe-sm-2">
+                                              <div class="form-outline">
+
+                                                  <label class="form-label" for="form7">City</label>
+                                                  <input type="text" id="form7" class="form-control order-form-input text-light" />
+                                                  
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-6 mt-2 ps-sm-0">
+                                              <div class="form-outline">
+                                                  <label class="form-label" for="form8">Region</label>
+                                                  <input type="text" id="form8" class="form-control order-form-input text-light" />
+                                                  
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-6 mt-2 pe-sm-2">
+                                              <div class="form-outline">
+                                                  <label class="form-label" for="form9">Postal / Zip Code</label>
+                                                  <input type="text" id="form9" class="form-control order-form-input text-light" />
+                                                  
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-6 mt-2 ps-sm-0">
+                                              <div class="form-outline">
+                                                <label class="form-label" for="form10">Country</label>
+                                                
+                                          {% include 'base/countryselect.html' %}
+                                               
+                                              
+                                              </div>
+                                          </div>
+                                      </div>
+                        
+                                      
+                                          <div class="col-12">
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                  <label class="form-check-label" for="flexCheckDefault">I agree to receive update emails</label>
+                                              </div>
+                                          </div>
+                                     
+                        
+                                      <div class="row mt-4">
+                                          <div class="col-12">
+                                              <button type="button" id="btnSubmit" class="btn btn-outline-info btn-lg mt-3 btn-submit">Submit</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </section>
+
+
+                        <!-- end of details -->
+                      </div>
+                    </div>
+                  </div>                
+
+                 
+
+                </div> 
+                    <div class="col-md-5 text-center  d-md-block mt-5">
+                      <!-- tooltip -->
+                      
+                      <span class="tt" data-bs-placement="bottom" title="Mac Tech Drone">
+                        <img class="img-fluid "  src="{{ picture2.get_image }}" alt="drone photo">
+                        
+                      </span>
+                      </div>
+                   
+                   
+            </div>
+        </div>
+
+       
+
+    </section>
+ <!-- pricing plans -->
+
+
+    <section id="pricing" class="pricing ">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2 class="text-light">Pricing Plans</h2>
+                <p class="lead text-light">Choose a pricing plan to suit you.</p>
+            </div>
+            <div class="row my-5 align-items-center justify-content-center">
+                <div class="col-sm-8 col-lg-4 col-xl-3 card border-info border-2">
+                 
+                    <div class="card border-0">
+                        <div class="card-body  text-center py-4">
+                            <h4 class="card-title">{{starter.title}}</h4>
+                            <p class="lead card-subtitle">Mac-Tech Pro II</p>
+                            <p class="display-5 my-4 text-info fw-bold">${{starter.price}}</p>
+                            <p class="card-text mx-5 text-light  d-lg-block">{{starter.description}}</p>
+                            <a href="#offcanvasRight"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+
+                        
+                        </div>
+                      </div>
+                    </div> 
+          
+                <div class="col-sm-9 col-lg-4">
+                    <div class="card border-info border-2">
+                      <div class="card-header text-center text-info">Most Popular</div>
+                      <div class="card-body text-center py-5">
+                        <h4 class="card-title">{{most_popular.title}}</h4>
+                        <p class="lead card-subtitle">Mac-Tech Pro II Fly More Combo</p>
+                        <p class="display-4 my-4 text-info fw-bold">${{most_popular.price}}</p>
+                        <p class="card-text mx-5 text-light d-lg-block">{{most_popular.description}}</p>
+                        <a href="#offcanvasRight"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-8 col-lg-4 col-xl-3 card border-info border-2">
+                    <div class="card border-0">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">{{ultimate.title}}</h4>
+                            <p class="lead card-subtitle">Mac-Tech Pro II Ultra Combo</p>
+                            <p class="display-5 my-4 text-info fw-bold">${{ultimate.price}}</p>
+                            <p class="card-text mx-5 text-light d-lg-block">{{ultimate.description}}</p>
+                            <a href="#offcanvasRight"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+
+                        
+                        </div>
+                    </div>
+                </div>  
+
+                  
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- topics at a glance -->
+    <section id="topics" class="topics">
+        <section id="topics">
+            <div class="container-md">
+              <div class="text-center text-light">
+                <h2>Features</h2>
+                <p class="lead text-light">The Mac-Tech Pro II Series features next-level imaging performance. Mac-Tech Pro II's triple-camera system ushers in a new era of camera drones by housing three sensors and lenses with different focal lengths. Equipped with a Hasselblad camera and dual tele cameras, Mac-Tech II Pro is a triple-camera drone that unlocks new shooting perspectives, allowing you to embrace creative freedom further, capture fascinating scenery, explore photographic storytelling, and make cinematic masterpieces.</p>
+              </div>
+              <div class="row my-5 g-5 justify-content-around align-items-center">
+                <div class="col-6 col-lg-4">
+                  <img src="{{ picture1.get_image }}"    class="img-fluid d-none d-md-block"  alt="drone">
+                </div>
+
+                <div class="col-lg-6">
+                  <!-- accordion -->
+                  <div class="accordion " id="chapters">
+                    <div class="accordion-item accord_text">
+                      <h2 class="accordion-header " id="heading-1">
+                        <button class="accordion-button text-light " type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                        Compact and Portable</button>
+                      </h2>
+                      <div id="chapter-1" class="accordion-collapse collapse show " aria-labelledby="heading-1" 
+                      data-bs-parent="#chapters"><div class="accordion-body">
+                        <p>The Mac-Tech Pro II is designed to be incredibly compact and highly portable, fitting comfortably in the palm of your hand. This remarkable level of portability means you can take your drone with you on all your adventures, whether you're exploring new landscapes or capturing memories at family gatherings.</p>
+                       
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item accord_text">
+                      <h2 class="accordion-header" id="heading-2">
+                        <button class="accordion-button collapsed text-light " type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                          Easy to Fly
+                        </button>
+                      </h2>
+                      <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                          <p>Regardless of your experience level, flying the Mac-Tech Pro II is a breeze. Its user-friendly controls provide a smooth and stable flight experience. Even if you're a first-time pilot, you'll quickly feel in command of your drone. For seasoned pros, the Mac-Tech Pro II offers precise control and responsiveness that will impress.</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item accord_text">
+                      <h2 class="accordion-header" id="heading-3">
+                        <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-1">
+                          Stunning Aerial Photography
+                        </button>
+                      </h2>
+                      <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                          <p>With a built-in high-definition camera, the Mac-Tech Pro II elevates your photography game to new heights. Capture breathtaking photos and videos from the skies with precision and clarity. Share your unique perspective and unlock the world of aerial photography.</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item accord_text">
+                      <h2 class="accordion-header" id="heading-4">
+                        <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
+                          Long Battery Life
+                        </button>
+                      </h2>
+                      <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                          <p>The Mac-Tech Pro II's efficient battery ensures you can enjoy extended flight time. Spend less time worrying about recharging and more time exploring your surroundings and capturing every moment from above. It's your ticket to endless adventures.</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item accord_text">
+                      <h2 class="accordion-header" id="heading-5">
+                        <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-5" aria-expanded="false" aria-controls="chapter-5">
+                          Smart Features
+                        </button>
+                      </h2>
+                      <div id="chapter-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                          <p>he Mac-Tech Pro II comes equipped with a range of intelligent features. The auto-hover function keeps your drone in a stable position, headless mode simplifies orientation, and one-button takeoff and landing make flying hassle-free. These smart features ensure that your drone is accessible to pilots of all skill levels.</p>
+                          
+                        </div>
+                      </div>
+
+                  </div>
+                  </div>
+                </div>
+                </div>
+              </div>     
+    </section>
+
+    <!-- review list -->
+    <section id="reviews" class="bg-altlight">
+      <div class="container-lg">
+        <div class="text-center text-light">
+          <h2><i class="bi bi-stars"></i>Model Reviews</h2>
+          <p class="lead">What our Buyers say about our Model</p>
+        </div>
+
+
+        <section class="text-center text-lg-start shadow-1-strong rounded" >
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-8">
+      
+              <div class="list-group">
+                
+                      
+      {% for profile in profiles %}
+      
+            <div class="card border-info border-2">
+              <div class="card-body m-3">
+                  
+                <div class="row">
+                  <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                    <div class="circle-img img-circle">
+                    <img src="{{profile.get_profile_pic}}"
+                      class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="50" />
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <p class="text-light fw-medium mb-4">
+                      {{profile.review}}
+                    </p>
+                    <p class="fw-bold lead mb-2"><strong>{{profile.first_name}} {{profile.last_name}} </strong></p>
+                    <p class="fw-bold text-info mb-4">{{profile.job_title}}</p>
+                    <div class="pb-2 mt-2">
+                   
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+      {% endfor %}      
+      
+      </div>
+          </div>
+        
+      </div>
+      
+      
+      </div>
+      </section>
+
+
+
+
+    <!-- contact form -->
+    <section id="contact ">
+      <div class="container-lg">
+        <div class="text-center text-light">
+        <div class="form-items">
+          <h2 class="mt-4">Get In Touch</h2>
+          <p class="lead">Questions to ask? Fill out the form to contact us directly...</p>
+        
+        <div class="row justify-content-center my-5 ">
+          <div class="col-12 col-lg-8 mx-auto">
+            <form>
+              <label for="email" class="form-label">Email Address: </label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input type="email" class="form-control text-light" id="email" placeholder="e.g. someone@example.com">
+                <!-- tooltip -->
+                
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                 </span>
+                </span>
+
+              </div>
+              
+              <label for="name" class="form-label">Name:</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <input type="text" class="form-control text-light" id="name" placeholder="e.g. John">
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Put your name">
+                  <i class="bi bi-question-circle text-muted"></i>
+                 </span>
+                </span>
+
+              </div>
+              
+              <label for="subject" class="form-label">What is your question about?</label>
+
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-chat-right-dots-fill"></i>
+                </span>
+
+                <select class="form-select text-light" id="subject">
+                  <option value="pricing" selected>Pricing query</option>
+                  <option value="content">Content query</option>
+                  <option value="other">Other query</option>
+                </select>
+
+              </div>
+
+              <label for="query" class="form-label">Your Query</label>
+              <div class="form-floating ">
+
+                <textarea id="query" class="form-control text-light"  style="height: 140px"></textarea>
+               
+
+              </div>
+              <div class="mb-4 text-center">
+                <button class="btn btn-dark btn-lg btn-outline-info text-light mt-4" type="submit">Submit</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- get updates modals -->
+    <section class="mt-5 get_updates">
+      <div class="container-lg">
+        <div class="col-12 mx-auto md-8 text-center text-light">
+        <h2>Stay in the loop</h2>
+        <p class="lead">Get the latest updates as they happen</p>
+      
+      <div class="row justify-content-center">
+        
+           <p class="text-light my-4">Get 1% Credit Rewards, Free Shipping on Orders Over USD $299, 14-Day Returns, and other exclusive official offers.</p>
+          </div>
+            <button class="btn btn-dark btn-lg btn-outline-info text-light mt-4" data-bs-toggle="modal" data-bs-target="#reg-modal">
+              Register for updates
+            </button>
+        </div>
+      
+      </div>
+      </div>
+    </section>
+
+    <!-- modal itself -->
+    <div id="reg-modal" class="modal fade" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content updates_window">
+          <div class="modal-header">
+            <h5 class="modal-title text-light" id="modal-title">Get the Latest Updates</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-light">Stay informed with the latest news and updates. We'll send you exclusive offers, product releases, and exciting announcements straight to your inbox.</p>
+            <label for="modal-email" class="form-label text-light">Your email address: </label>
+            <input type="email" class="form-control input_email text-light" id="modal-email" placeholder="e.g. someone@example.com">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark btn-lg btn-outline-info text-light">Submit</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    {% endblock %}

@@ -1,0 +1,145 @@
+section{
+    padding: 60px 0;
+} 
+ nav{
+  background: black;
+  
+} 
+
+
+
+
+@media only screen and (max-width:768px){
+  html,
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+}
+
+
+.topics, .intro, .pricing {
+background: linear-gradient(90deg, rgba(16, 2, 66, 1) 21%, rgba(36, 50, 230, 1) 100%); 
+}
+
+.gradient{
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(243, 245, 255, 1) 100%); 
+
+ } 
+
+.card{
+
+--primary: #63e380 !important;
+--primary-hover: #56c36e !important;
+--contrast: #e9eaea;
+.day { color: #d7a447; }
+.night { color: #2c2c4f; }
+--background-color: #161b22 !important;
+--color: #757d88 !important;
+box-shadow: 0 20px 80px -20px #0000006e !important;
+color: white !important;
+background-color: #1f262f;
+
+
+}
+
+.accordion-collapse button:active {
+background-color:  #203550;
+color: #203550;
+}
+
+
+.accordion{
+--bs-accordion-btn-bg: #203550;
+--bs-accordion-active-bg: #203550;
+
+}
+
+
+
+.accordion-button:not(.collapsed) {
+border: 2px solid #0ce7ff;
+background-color: #203550;
+}
+
+.accordion-button{
+background-color: #203550;
+border: 2px solid #0ce7ff;
+}
+.accord_text{
+box-shadow: 0 20px 80px -20px #0000006e !important;
+color: white;
+background-color: #1f262f;
+
+
+}
+.circle-img {
+width: 250px;
+height: 250px;
+overflow: hidden;
+}
+
+.circle-img img {
+height: 100%;
+transform: translateX(-50%);
+margin-left: 50%;
+}
+
+
+.form-items {
+border: 3px solid #0ce7ff; 
+
+background-color: #1f262f;
+display: inline-block;
+width: 100%;
+
+padding: 8px;
+
+
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease; 
+}
+
+.get_updates{
+background-color: #203550;
+border: 3px solid #0ce7ff;
+
+
+}
+.updates_window{
+background-color: #1f262f;
+border: 3px solid #0ce7ff;
+
+}
+
+@media (max-width: 768px) {
+  .updates_window {
+    max-width: 100%; 
+  }
+}
+.offcanvas {
+  max-width: 80%; 
+}
+
+
+
+body{ padding-right: 0 !important;
+  
+ }
+
+.offcanvas{
+background-color: #1f262f;
+border: 3px solid #0ce7ff;
+
+}
+
+.form-select, .form-control{
+background-color: black;
+
+}
+
+
+.form-select, .form-control:focus{
+  background-color: black;
+  }

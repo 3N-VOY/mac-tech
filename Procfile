@@ -1,0 +1,1 @@
+web: gunicorn mactech.wsgi --log-file - 
