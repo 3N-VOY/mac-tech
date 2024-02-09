@@ -2,7 +2,7 @@
 Single-page website for showcasing and selling the MacTech Drone Pro II (fake drone used as an example).
 
 # Project Overview
-The MacTech Drone Pro II single-page website is designed to showcase and facilitate the purchase of the drone. It utilizes gradient coloring for a visually appealing design and incorporates diverse Bootstrap features. The website also features a database it stores item purchase packages and display customer reviews.
+The MacTech Drone Pro II single-page website is designed to showcase and facilitate the purchase of the drone. It utilizes gradient coloring for a visually appealing design and incorporates diverse Bootstrap features. The website also features a database it stores item purchase packages and display customer reviews. Fully responsive optimized for mobile usage.
 
 # To set up the project locally, follow these steps:
 
